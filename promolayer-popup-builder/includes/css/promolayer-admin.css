@@ -60,7 +60,7 @@
 .pl-button:hover, .pl-button:focus{
     color:#fff;
     background:rgba(46,0,196,1);
-    box-shadow: 0px 0px 10px rgb(92 61 194 / 51%)
+    box-shadow: 0 0 10px rgb(92 61 194 / 51%)
 }
 .pl-button img{
     display: inline-block;
@@ -118,7 +118,7 @@
     flex-grow:0;
     flex-shrink:0;
     padding:5px 20px 5px 40px;
-    background: url("../../assets/images/circle-check.svg");
+    background: url("../../images/circle-check.svg");
     background-size:24px;
     background-repeat:no-repeat;
     background-position:left center;

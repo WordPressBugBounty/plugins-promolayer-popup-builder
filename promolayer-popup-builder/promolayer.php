@@ -13,10 +13,10 @@
  * @package           Promolayer
  *
  * @wordpress-plugin
- * Plugin Name:       Promolayer popup builder
+ * Plugin Name:       Promolayer - Popup Builder & Abandonment Preventer
  * Plugin URI:        https://promolayer.io
  * Description:       Pop ups, banners, slide ins and more for your website. Boost your conversion and subscription rate with beautiful displays.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            Peakdigital
  * Author URI:        https://promolayer.io
  * License:           GPL-2.0+
@@ -26,7 +26,7 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
+if (!defined('WPINC')) {
     die;
 }
 
@@ -37,14 +37,15 @@ define('PROMOLAYER_SCRIPT_URL', 'https://modules.promolayer.io/index.js');
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PROMOLAYER_VERSION', '1.1.1' );
+define('PROMOLAYER_VERSION', '1.1.2');
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-promolayer-activator.php
  */
-function activate_promolayer() {
-    require_once plugin_dir_path( __FILE__ ) . 'includes/class-promolayer-activator.php';
+function promolayer_popup_builder_activate()
+{
+    require_once plugin_dir_path(__FILE__) . 'includes/class-promolayer-activator.php';
     Promolayer_Activator::activate();
 }
 
@@ -52,19 +53,20 @@ function activate_promolayer() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-promolayer-deactivator.php
  */
-function deactivate_promolayer() {
-    require_once plugin_dir_path( __FILE__ ) . 'includes/class-promolayer-deactivator.php';
+function promolayer_popup_builder_deactivate()
+{
+    require_once plugin_dir_path(__FILE__) . 'includes/class-promolayer-deactivator.php';
     Promolayer_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_promolayer' );
-register_deactivation_hook( __FILE__, 'deactivate_promolayer' );
+register_activation_hook(__FILE__, 'promolayer_popup_builder_activate');
+register_deactivation_hook(__FILE__, 'promolayer_popup_builder_deactivate');
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-promolayer.php';
+require plugin_dir_path(__FILE__) . 'includes/class-promolayer.php';
 
 /**
  * Begins execution of the plugin.
@@ -75,10 +77,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-promolayer.php';
  *
  * @since    1.0.0
  */
-
-function run_promolayer() {
+function promolayer_popup_builder_run()
+{
 
     $plugin = Promolayer::getInstance();
     $plugin->run();
 }
-run_promolayer();
+promolayer_popup_builder_run();

@@ -170,24 +170,30 @@ class Promolayer_Admin {
     }
 
     public function process_connection(){
-        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'promolayer_nonce')) {
+        // Verify nonce: unslash and sanitize before verification
+        $nonce = isset($_POST['nonce']) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '';
+        if ( empty( $nonce ) || ! wp_verify_nonce( $nonce, 'promolayer_nonce' ) ) {
             wp_send_json_error('Nonce verification failed', 403);
         }
 
-        if(!isset($_POST['secret']) || !isset($_POST['userId']))  exit('No userId or secret');
+        if ( ! isset( $_POST['secret'] ) || ! isset( $_POST['userId'] ) ) {
+            exit('No userId or secret');
+        }
         $promolayer = Promolayer::getInstance();
 
         $secret = $promolayer->get_option('secret');
 
-        if($_POST['secret'] == $secret){
-            $user_id = sanitize_text_field($_POST['userId']);
+        // Unslash and sanitize incoming values
+        $posted_secret = sanitize_text_field( wp_unslash( $_POST['secret'] ) );
+        if ( hash_equals( (string) $posted_secret, (string) $secret ) ) {
+            $user_id = sanitize_text_field( wp_unslash( $_POST['userId'] ) );
             $promolayer->set_option('user_id', $user_id);
             $promolayer->set_option('site_url', site_url());
             $woocommerce_activated =  $promolayer->is_woocommerce_activated() ? 'yes' : 'no';
             $promolayer->set_option('woocommerce_activated', $woocommerce_activated);
             $promolayer->clear_all_caches();
             echo wp_json_encode(['status'=>'success']);
-        }else{
+        } else {
             echo wp_json_encode(['status'=>'error']);
         }
 
@@ -196,7 +202,9 @@ class Promolayer_Admin {
 
 
     public function promolayer_is_connected() {
-        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'promolayer_nonce')) {
+        // Verify nonce: unslash and sanitize before verification
+        $nonce = isset($_POST['nonce']) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '';
+        if ( empty( $nonce ) || ! wp_verify_nonce( $nonce, 'promolayer_nonce' ) ) {
             wp_send_json_error('Nonce verification failed', 403);
         }
 
@@ -207,7 +215,9 @@ class Promolayer_Admin {
     }
 
     public function promolayer_disconnect(){
-        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'promolayer_nonce')) {
+        // Verify nonce: unslash and sanitize before verification
+        $nonce = isset($_POST['nonce']) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '';
+        if ( empty( $nonce ) || ! wp_verify_nonce( $nonce, 'promolayer_nonce' ) ) {
             wp_send_json_error('Nonce verification failed', 403);
         }
 

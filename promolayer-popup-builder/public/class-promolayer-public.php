@@ -63,7 +63,11 @@ class Promolayer_Public {
 	public function enqueue_scripts() {
 
         $compatMode = false;
-        if(in_array('wp-rocket/wp-rocket.php', apply_filters('active_plugins', get_option('active_plugins')))){
+        // Replace apply_filters('active_plugins', ...) with is_plugin_active to avoid non-prefixed custom hook usage
+        if ( ! function_exists( 'is_plugin_active' ) ) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+        if ( function_exists( 'is_plugin_active' ) && ( is_plugin_active( 'wp-rocket/wp-rocket.php' ) || defined( 'WP_ROCKET_VERSION' ) ) ) {
             $compatMode = true;
         }
 

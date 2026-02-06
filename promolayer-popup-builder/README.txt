@@ -1,10 +1,10 @@
-=== Pop ups, Exit intent popups, email popups, banners, bars, countdowns and cart savers - Promolayer ===
+=== Promolayer - Popup Builder & Abandonment Preventer ===
 Contributors: promolayerpopupbuilder  
 Donate link: https://promolayer.io  
 Tags: Popup, popup builder, exit intent, abandonment prevention, spin to win
 Requires at least: 4.6
-Tested up to: 6.5
-Stable tag: 1.1.1
+Tested up to: 6.8
+Stable tag: 1.1.2
 Requires PHP: 5.6  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,9 +13,9 @@ Not your average popup builder! Boost conversions and subscriptions with beautif
 
 == Description ==
 
-**Promolayer is the best way to rapidly create popups, slide-ins, spin the wheels, banners etc on your website. Continuously optimize and never stop improving with Promolayers best-in-class A/B testing tools.**
+Promolayer helps you rapidly create popups, slide-ins, spin the wheels, banners and more on your website. Continuously optimize and improve with Promolayer's A/B testing tools.
 
-**Professional growth hackers and CRO experts prefer Promolayer** for it's no-nonsense ease of use and actionable data-forward reporting. You can create beautiful contact forms, signup forms, newsletter forms, optins in just 2 minutes. Advanced targeting rules, triggers and exclusions are all included.
+Promolayer offers no-nonsense ease of use and actionable data-forward reporting. You can create beautiful contact forms, signup forms, newsletter forms, and optins in just 2 minutes. Advanced targeting rules, triggers and exclusions are all included.
 
 How Promolayer can help your growth
 
@@ -66,29 +66,22 @@ Promolayer integrates natively with Mailchimp and Klaviyo. A webhook is availabl
 
 Our custom HTML component allows you to add quizzes, social share buttons (such as Messenger and Line buttons) Opinion Stage polls, Apester, Google surveys, Google maps, Typeform, Jotform, Wufoo and many more.
 
-Promolayer is designed from the ground up for conversion rate optimization. However, it's compatible with other testing and analytics tools such as Hotjar, Lucky Orange, ClickTale, FullStory Smartlook, Crazyegg, MouseFlow or any other heatmap and session recording tools.
+Promolayer is designed from the ground up for conversion rate optimization. However, it**About Promolayer**
 
-**Pricing**
-Promolayers free plan is available for the first 1,000 popup views / month and doesn't require a credit card to start.
-
-Don't waste your time with overpriced platforms like KARTE (カルテ), Combeez, Robee, Popee, Sprocket or Channel that cost up to 20x what Promolayer does, often with less functionality. Skyrocket your conversions without breaking the bank.
-
-**About Promolayer**
-
-Promolayer was created in Japan. Firstly out of frustration with other global platforms like Poptin, Optinmonster, Hubspot, Privy etc that both don't fully support Japanese or have Japanese templates and overcharge for the service. Since then Promolayer has grown and grown and now fully supports English and is bringing world-class Japanese design sense and customer service to the global market.
+Promolayer was created in Japan and has grown to fully support both English and Japanese, bringing world-class Japanese design sense and customer service to the global market.
 
 **Looking for more information about our features?**
 
 For our English-speaking customers, please visit our [Popup builder](https://promolayer.io/ "Promolayers popup builder")s homepage.
 
-For our Japanese speaker customers you can find information on specifics such as [abandonment prevention popups](https://promolayer.io/ "Abadonment prevention popups"), [cart abandonment reduction](https://promolayer.io/%E3%82%AB%E3%82%B4%E8%90%BD%E3%81%A1%E5%AF%BE%E7%AD%96/  "cart abandonment reduction") and our [popup tool](https://promolayer.io/ "Popup tool") at the Promolayer homepage.
+For our Japanese speaker customers you can find information on specifics such as [abandonment prevention popups](https://promolayer.io/ "Abandonment prevention popups"), [cart abandonment reduction](https://promolayer.io/%E3%82%AB%E3%82%B4%E8%90%BD%E3%81%A1%E5%AF%BE%E7%AD%96/  "cart abandonment reduction") and our [popup tool](https://promolayer.io/ "Popup tool") at the Promolayer homepage.
 
 == Installation ==
 
-1. Install the Promolayer plugin via the WordPress.org plugin respositry or by uploading the files to your server.
+1. Install the Promolayer plugin via the WordPress.org plugin repository or by uploading the files to your server.
 1. Activate the Promolayer plugin.
 1. Navigate to the Promolayer plugin page and click 'Connect or create a Promolayer account'
-1. After logging in you are finished, everything is connected. All Promolayer featues are available on our free plan. For high traffic sites please consider upgrading.
+1. After logging in you are finished, everything is connected. All Promolayer features are available on our free plan. For high traffic sites please consider upgrading.
 
 == Frequently Asked Questions ==
 
@@ -185,6 +178,12 @@ Here are some examples of the types things you can create with Promolayer
 6. Promolayer was built mobile first and true responsive.
 
 == Changelog ==
+
+= 1.1.2 =
+* Updated plugin naming to comply with WordPress directory guidelines.
+* Fixed typos in documentation.
+* Added security improvements for direct file access protection.
+* Improved internationalization.
 
 = 1.1.1 =
 * Tightened security, added adherance to new Wordpress standards.
