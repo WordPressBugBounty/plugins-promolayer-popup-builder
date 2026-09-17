@@ -16,7 +16,7 @@
  * Plugin Name:       Promolayer - Popup Builder & Abandonment Preventer
  * Plugin URI:        https://promolayer.io
  * Description:       Pop ups, banners, slide ins and more for your website. Boost your conversion and subscription rate with beautiful displays.
- * Version:           1.1.2
+ * Version:           1.1.3
  * Author:            Peakdigital
  * Author URI:        https://promolayer.io
  * License:           GPL-2.0+
@@ -37,7 +37,7 @@ define('PROMOLAYER_SCRIPT_URL', 'https://modules.promolayer.io/index.js');
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('PROMOLAYER_VERSION', '1.1.2');
+define('PROMOLAYER_VERSION', '1.1.3');
 
 /**
  * The code that runs during plugin activation.

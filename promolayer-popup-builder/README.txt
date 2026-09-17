@@ -1,10 +1,10 @@
 === Promolayer - Popup Builder & Abandonment Preventer ===
 Contributors: promolayerpopupbuilder  
 Donate link: https://promolayer.io  
-Tags: Popup, popup builder, exit intent, abandonment prevention, spin to win
+Tags: Popup, popup builder, exit intent, notification bar, spin to win
 Requires at least: 4.6
-Tested up to: 6.8
-Stable tag: 1.1.2
+Tested up to: 7.1
+Stable tag: 1.1.3
 Requires PHP: 5.6  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -66,7 +66,9 @@ Promolayer integrates natively with Mailchimp and Klaviyo. A webhook is availabl
 
 Our custom HTML component allows you to add quizzes, social share buttons (such as Messenger and Line buttons) Opinion Stage polls, Apester, Google surveys, Google maps, Typeform, Jotform, Wufoo and many more.
 
-Promolayer is designed from the ground up for conversion rate optimization. However, it**About Promolayer**
+Promolayer is designed from the ground up for conversion rate optimization.
+
+**About Promolayer**
 
 Promolayer was created in Japan and has grown to fully support both English and Japanese, bringing world-class Japanese design sense and customer service to the global market.
 
@@ -87,9 +89,9 @@ For our Japanese speaker customers you can find information on specifics such as
 
 = Why is there a plugin? Isn't this just a gateway to a SaaS? =
 
-Our plugin lets us tighten our integrations with Wordpress. Aside from one-click installation and auto domain re-configuring when you migrate between environments our plugin also allows for automatic coupon generation and cart integrations with WooCommerce which wouldn't be possible without a plugin.
+The plugin removes the setup steps. It installs the Promolayer script for you, so there is no code to paste into your theme and nothing to re-add when you change or update your theme.
 
-If you don't want to use the plugin you can sign up for a generic account at promolayer.io and just copy paste a single line of code in. Please be aware in doing so you will not have access to all auto configurations and coupon / cart integrations.
+If you prefer not to use the plugin you can sign up at promolayer.io and paste a single line of code into your site instead. Everything else works the same way.
 
 = How are popup views counted? =
 
@@ -128,7 +130,6 @@ Here are some examples of the types things you can create with Promolayer
 - custom form
 - custom forms
 - custom popup
-- donation form
 - email form
 - email forms
 - email submit form
@@ -142,7 +143,6 @@ Here are some examples of the types things you can create with Promolayer
 - mobile popup
 - newsletter form
 - newsletter popup
-- pdf form
 - popup form
 - previews
 - quiz form
@@ -150,23 +150,19 @@ Here are some examples of the types things you can create with Promolayer
 - quote request form
 - registration popup
 - scroll trigger popup
-- signature form
 - signup form
 - slide-in popup
 - slide-in scroll popup
-- star rating form
 - sticky bar
 - sticky popup
 - subscription form
 - targeted popup
 - teasers
 - time on site popup
-- upload form
 - user registration form
 - web contact form
 - web form
 - welcome mat popup
-- woocommerce popup
 
 == Screenshots ==
 
@@ -179,6 +175,10 @@ Here are some examples of the types things you can create with Promolayer
 
 == Changelog ==
 
+= 1.1.3 =
+* Confirmed compatibility with WordPress 7.1.
+* Fixed a broken sentence in the plugin description.
+
 = 1.1.2 =
 * Updated plugin naming to comply with WordPress directory guidelines.
 * Fixed typos in documentation.
@@ -188,36 +188,36 @@ Here are some examples of the types things you can create with Promolayer
 = 1.1.1 =
 * Tightened security, added adherance to new Wordpress standards.
 
-= 1.0 =
-* Initial release integrates our whole system of popups, spin to wins, slide-ins, full screens, email newsletter and optin forms for email list building.
+= 1.1.0 =
+* Compatibility with Wordpress 6.5 confirmed.
+* Reporting features upgraded and much more in-app as always.
 
-= 1.0.2 =
-* Updating screenshots and readmes, adjusting text domains etc for better Japanese support.
+= 1.0.9 =
+* Added auto-cache clearing on account connection.
+* Added many new targeting and segmentation rules.
 
-= 1.0.3 =
-* Adding disconnect functionality for uses who wish to switch accounts.
+= 1.0.8 =
+* Tested compatibility with Wordpress 6.2
+
+= 1.0.7 =
+* Added compatibility for multi-platform users.
+
+= 1.0.6 =
+* Improved compatibility with older versions of PHP.
+
+= 1.0.5 =
+* Added compatibility functions to work better with script compressors and optimizers.
 
 = 1.0.4 =
 * Promolayer is now significantly faster to load with a 70% reduction in bundle size.
 * Previous versions should be upgraded immediately.
 * PHP Notices have been fixed.
 
-= 1.0.5 =
-* Added compatibility functions to work better with script compressors and optimizers.
+= 1.0.3 =
+* Adding disconnect functionality for uses who wish to switch accounts.
 
-= 1.0.6 =
-* Improved compatibility with older versions of PHP.
+= 1.0.2 =
+* Updating screenshots and readmes, adjusting text domains etc for better Japanese support.
 
-= 1.0.7 =
-* Added compatibility for multi-platform users.
-
-= 1.0.8 =
-* Tested compatibility with Wordpress 6.2
-
-= 1.0.9 =
-* Added auto-cache clearing on account connection.
-* Added many new targeting and segmentation rules.
-
-= 1.1.0 =
-* Compatibility with Wordpress 6.5 confirmed.
-* Reporting features upgraded and much more in-app as always.
+= 1.0 =
+* Initial release integrates our whole system of popups, spin to wins, slide-ins, full screens, email newsletter and optin forms for email list building.
